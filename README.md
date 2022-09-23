@@ -1,2 +1,2 @@
 # advanced-javascript
-Advanced JavaScript Course - Begineers Friendly
+Advanced JavaScript Course - Beginner Friendly
