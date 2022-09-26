@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Showing Outputs using Different Methods</title>
+</head>
+<body>
+  <h1> Showing Outputs using Different Methods </h1>
+  <p id="resultholder"></p>
+
+  <script>
+    // Variables
+    var yourName = prompt("What is your Name?");
+    var yourBirthYear = prompt("What is your Birth Year?");
+    var yourJob = prompt("What is your Job?");
+    const year = 2022;
+    
+    // Placing Result inside an Element - Example - #Resultholder
+    document.getElementById("resultholder").innerHTML = "Hello, My name is " + yourName + " a " + ( year - yourBirthYear ) + " years Old " + yourJob + "!";
+
+    // document.write();
+    document.write("Hello, My name is " + yourName, " a " + ( year - yourBirthYear ) + " years Old " + yourJob + "!");
+
+    // document.write() with Strings - Template Literals
+    document.write(`<br><br> Hello, My name is ${yourName} a ${year - yourBirthYear} years old ${yourJob}!`);
+    
+    // Console.log();
+    console.log (`Hello, My name is ${yourName} a ${year - yourBirthYear} years old ${yourJob}!`);
+    
+    // Alert
+    alert(`Hello, My name is ${yourName} a ${year - yourBirthYear} years old ${yourJob}!`);
+  </script>
+</body>
+</html>

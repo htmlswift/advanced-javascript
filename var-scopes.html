@@ -1,0 +1,56 @@
+<html>
+
+  <script>
+    /* Global Scope */
+    var carName = "Volvo";
+
+    myFunction();
+    function myFunction() {
+      document.write("<br><br> From Global Scope: " + "<strong>" + carName + "</strong>" );
+    }
+
+    // Function Scope
+    myFunction2();
+    function myFunction2() {
+      var carName2 = "BMW"; 
+      document.write("<br><br>From Function Scope (Inside Function): " + "<strong>" + carName2 + "</strong>");
+    }
+
+    // Black Scope - Var
+    {
+      var x = 21515151;
+    } 
+    document.write("<br><br>From Block Scope (variable with var can be used): " + x);
+
+    // Black Scope - Let
+    {
+      let y = 2;
+    }
+    // document.write("<br><br> From Block Scope (variable with let cannot be used): " + y);
+    // Console says: Uncaught ReferenceError: y is not defined
+
+
+    var i = 5;
+    for (var i = 0; i < 10; i++) {
+      // some statements
+      // document.write("<br><br>From Loop Scope: " + i ) ;
+      // (the variable declared in the loop redeclares the variable outside the loop):" + i);
+    }
+
+    let j = 5;
+    for (let j = 0; j < 10; j++) { 
+      document.write("<br><br>From Loop Scope: " + j ) ;
+      // some statements
+    }
+    document.write("<br><br>From Loop Scope (the variable declared in the loop does not redeclare the variable outside the loop): " + j);
+    // Here j is 5
+
+    // ============================================================= //
+    var z = 5;
+    for (let z = 0; z < 10; z++) {
+    // some statements
+    }
+    document.write("<br><br>From Loop Scope (the variable declared in the loop is local while same name variable is also global): " + z);
+
+  </script>
+</html>
